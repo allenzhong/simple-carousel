@@ -19,7 +19,9 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <div className="App-intro">
-          <Carousel images={images} />
+          <div className="container">
+            <Carousel images={images} />
+          </div>
         </div>
       </div>
     );

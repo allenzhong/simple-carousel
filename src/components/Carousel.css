@@ -1,11 +1,16 @@
 ul.carousel{
-  width: 400px;
+  width: 100%;
   margin: 0 auto;
 }
 
 ul.carousel img{
-  width: 400px;
-  margin: 0 auto;
+  position:absolute;
+  top:50%;
+  min-height:100%;
+  display:block;
+  left:50%;
+  transform: translate(-50%, -50%);
+  min-width:100%;
 }
 
 .carousel-enter {
