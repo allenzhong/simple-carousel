@@ -1,0 +1,30 @@
+ul.carousel{
+  width: 400px;
+  margin: 0 auto;
+}
+
+ul.carousel img{
+  width: 400px;
+  margin: 0 auto;
+}
+
+.carousel-enter {
+  opacity: 0.01;
+}
+
+.carousel-enter.carousel-enter-active {
+  opacity: 1;
+  transition: opacity  500ms ease-in;
+}
+
+.carousel-leave {
+  opacity: 1;
+}
+
+.carousel-leave.carousel-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+
+
