@@ -32,3 +32,13 @@ ul.carousel {
 .carousel-leave.carousel-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in; }
+
+.carousel--indicators {
+  display: flex;
+  justify-content: flex-end;
+  height: 30px; }
+  .carousel--indicators .carousel--indicators_button {
+    margin: 0 0 0 10px;
+    height: auto; }
+  .carousel--indicators .active {
+    color: red; }

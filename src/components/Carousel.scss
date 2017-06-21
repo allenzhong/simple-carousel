@@ -40,5 +40,17 @@ ul.carousel{
   transition: opacity 300ms ease-in;
 }
 
+.carousel--indicators {
+  display: flex;
+  justify-content: flex-end;
+  height: 30px;
+  .carousel--indicators_button {
+    margin: 0 0 0 10px;
+    height: auto; 
+  }
+  .active {
+    color: red;
+  }
+}
 
 
