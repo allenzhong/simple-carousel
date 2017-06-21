@@ -18,7 +18,7 @@ export default class Carousel extends Component {
       ()=>{
         console.log(this.state.currentIndex);
         this.setState({currentIndex: (this.state.currentIndex + 1) % this.props.images.length});
-      }, 8000
+      }, 10000
     );  
   }
 
