@@ -45,11 +45,15 @@ ul.carousel{
   justify-content: flex-end;
   height: 30px;
   .carousel--indicators_button {
-    margin: 0 0 0 10px;
+    border: none;
+    margin: 0 0 0 0px;
     height: auto; 
+    background-color: white;
+    color: #595757;
+    border-radius: 0;
   }
   .active {
-    color: red;
+    color: #C30D23;
   }
 }
 

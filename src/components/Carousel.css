@@ -38,7 +38,11 @@ ul.carousel {
   justify-content: flex-end;
   height: 30px; }
   .carousel--indicators .carousel--indicators_button {
-    margin: 0 0 0 10px;
-    height: auto; }
+    border: none;
+    margin: 0 0 0 0px;
+    height: auto;
+    background-color: white;
+    color: #595757;
+    border-radius: 0; }
   .carousel--indicators .active {
-    color: red; }
+    color: #C30D23; }

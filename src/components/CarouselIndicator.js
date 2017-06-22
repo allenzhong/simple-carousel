@@ -13,7 +13,7 @@ export default class CarouselIndicator extends Component {
         [...Array(this.props.count)].map((_, i) => {
             return (
               <button className={this.props.currentIndex === i ? "carousel--indicators_button active" : "carousel--indicators_button"} key={i}>
-                &#9632;
+                &#9724;
               </button>
             )
           }
