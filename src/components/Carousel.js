@@ -7,12 +7,11 @@ import "./Carousel.css";
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
-    // let { images } = props;
     this.state = {
       currentIndex: 0
     }
     this.handleClick = this.handleClick.bind(this);
-    this.getStyle = this.getStyle.bind(this);
+    this.buttonStyle = this.buttonStyle.bind(this);
   }
 
   componentDidMount() {
@@ -30,11 +29,9 @@ export default class Carousel extends Component {
 
   handleClick(e) {
     this.setState({currentIndex: e.target.dataset.index});
-    // e.target.addClass("active");
   }
 
-  getStyle(i) {
-    console.log(`${this.state.currentIndex} === ${i}`);
+  buttonStyle(i) {
     return this.state.currentIndex == i ? "carousel--indicators_button active" : "carousel--indicators_button";
   }
 
@@ -53,7 +50,7 @@ export default class Carousel extends Component {
             />
           </CSSTransitionGroup>
         </ul>
-      <CarouselIndicator style={this.getStyle} currentIndex={this.state.currentIndex} count={this.props.images.length} handleClick={this.handleClick}/>
+      <CarouselIndicator style={this.buttonStyle} currentIndex={this.state.currentIndex} count={this.props.images.length} handleClick={this.handleClick}/>
       </div>
     );
   }

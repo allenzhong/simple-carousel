@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import "./Carousel.css";
 
 export default class CarouselIndicator extends Component {
-
-
   render() {
     return (
       <div className="carousel--indicators">
