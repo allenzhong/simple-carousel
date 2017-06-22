@@ -32,7 +32,7 @@ export default class Carousel extends Component {
   }
 
   buttonStyle(i) {
-    return this.state.currentIndex == i ? "carousel--indicators_button active" : "carousel--indicators_button";
+    return Number(this.state.currentIndex) === Number(i) ? "carousel--indicators_button active" : "carousel--indicators_button";
   }
 
   render() {
