@@ -6,7 +6,7 @@ ul.carousel {
   padding: 0 0 0 0;
   margin: 0 0 0 0; }
   ul.carousel li {
-    background-color: #ccc;
+    background-color: #carousel-background;
     display: flex;
     width: 100%;
     height: auto;
