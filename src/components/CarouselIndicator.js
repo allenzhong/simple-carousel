@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 import "./Carousel.css";
 
 export default class CarouselIndicator extends Component {
-  constructor(props) {
-    super(props);
-  }
+
 
   render() {
     return (
@@ -12,7 +10,10 @@ export default class CarouselIndicator extends Component {
       {
         [...Array(this.props.count)].map((_, i) => {
             return (
-              <button className={this.props.currentIndex === i ? "carousel--indicators_button active" : "carousel--indicators_button"} key={i}>
+              <button className={this.props.style(i)} 
+                      key={i}
+                      data-index={i}
+                      onClick={this.props.handleClick}>
                 &#9724;
               </button>
             )

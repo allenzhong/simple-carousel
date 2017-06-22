@@ -28,7 +28,7 @@ ul.carousel{
 
 .carousel-enter.carousel-enter-active {
   opacity: 1;
-  transition: opacity  500ms ease-in;
+  transition: opacity  300ms ease-in;
 }
 
 .carousel-leave {
@@ -37,7 +37,7 @@ ul.carousel{
 
 .carousel-leave.carousel-leave-active {
   opacity: 0.01;
-  transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-out;
 }
 
 .carousel--indicators {

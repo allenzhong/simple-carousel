@@ -24,14 +24,14 @@ ul.carousel {
 
 .carousel-enter.carousel-enter-active {
   opacity: 1;
-  transition: opacity  500ms ease-in; }
+  transition: opacity  300ms ease-in; }
 
 .carousel-leave {
   opacity: 1; }
 
 .carousel-leave.carousel-leave-active {
   opacity: 0.01;
-  transition: opacity 300ms ease-in; }
+  transition: opacity 300ms ease-out; }
 
 .carousel--indicators {
   display: flex;
