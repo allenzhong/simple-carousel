@@ -24,7 +24,7 @@ ul.carousel {
 
 .carousel-enter.carousel-enter-active {
   opacity: 1;
-  transition: opacity  300ms ease-in; }
+  transition: opacity 300ms ease-in; }
 
 .carousel-leave {
   opacity: 1; }
@@ -43,6 +43,7 @@ ul.carousel {
     height: auto;
     background-color: white;
     color: #595757;
-    border-radius: 0; }
+    outline: none;
+    text-decoration: none; }
   .carousel--indicators .active {
     color: #C30D23; }

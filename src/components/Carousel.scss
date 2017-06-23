@@ -33,7 +33,7 @@ ul.carousel{
 
 .carousel-enter.carousel-enter-active {
   opacity: 1;
-  transition: opacity  300ms ease-in;
+  transition: opacity 300ms ease-in;
 }
 
 .carousel-leave {
@@ -55,7 +55,8 @@ ul.carousel{
     height: auto; 
     background-color: $button-background;
     color: $button-color;
-    border-radius: 0;
+    outline: none;
+    text-decoration: none;
   }
   .active {
     color: $button-active-color;
