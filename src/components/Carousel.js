@@ -19,7 +19,7 @@ export default class Carousel extends Component {
       ()=>{
         console.log(this.state.currentIndex);
         this.setState({currentIndex: (this.state.currentIndex + 1) % this.props.images.length});
-      }, 20000
+      }, 5000
     );  
   }
 
@@ -42,8 +42,8 @@ export default class Carousel extends Component {
           <CSSTransitionGroup
             transitionName="carousel"
             component="li"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={300}>
+            transitionEnterTimeout={1000}
+            transitionLeaveTimeout={1000}>
             <img src={this.props.images[this.state.currentIndex]}
                  key={this.props.images[this.state.currentIndex]}
                  alt = ""

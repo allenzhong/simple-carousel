@@ -1,3 +1,5 @@
+$screen-width: 414px;
+$image-width: 400px;
 $carousel-background: #ccc;
 $button-active-color: #C30D23;
 $button-background: white;
@@ -11,7 +13,7 @@ ul.carousel{
   padding: 0 0 0 0;
   margin: 0 0 0 0;
   li {
-    background-color: #carousel-background;
+    background-color: $carousel-background;
     display: flex;
     width: 100%;
     height: auto;
@@ -19,7 +21,7 @@ ul.carousel{
     margin: 0 auto;
     justify-content: center;
     img {
-      display: table;
+      // display: table;
       position: relative;
       max-width: 100%;
       max-height: 100%;
@@ -28,21 +30,21 @@ ul.carousel{
 }
 
 .carousel-enter {
-  opacity: 0.01;
+  transform: translate(100%);
 }
 
 .carousel-enter.carousel-enter-active {
-  opacity: 1;
-  transition: opacity 300ms ease-in;
+  transform: translate(50%);
+  transition: transform 1000ms ease-in-out;
 }
 
 .carousel-leave {
-  opacity: 1;
+  transform: translate(-50%);
 }
 
 .carousel-leave.carousel-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-out;
+  transform: translate(-150%);
+  transition: transform 1000ms ease-in-out;
 }
 
 .carousel--indicators {
