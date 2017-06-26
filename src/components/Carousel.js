@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransitionGroup } from 'react-transition-group';
-import CarouselIndicator from "./CarouselIndicator";
+import CarouselIndicator, { Position } from "./CarouselIndicator";
 import "./Carousel.css";
 
 export default class Carousel extends Component {
@@ -50,7 +50,7 @@ export default class Carousel extends Component {
             />
           </CSSTransitionGroup>
         </ul>
-      <CarouselIndicator style={this.buttonStyle} currentIndex={this.state.currentIndex} count={this.props.images.length} handleClick={this.handleClick}/>
+      <CarouselIndicator position={Position.CENTER} style={this.buttonStyle} currentIndex={this.state.currentIndex} count={this.props.images.length} handleClick={this.handleClick}/>
       </div>
     );
   }

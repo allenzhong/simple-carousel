@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
 import "./Carousel.css";
 
-export default class CarouselIndicator extends Component {
+export const Position = {
+  CENTER: 'carousel--indicators__centered',
+  LEFT: 'carousel--indicators__left',
+  RIGHT: 'carousel--indicators__right'
+}
 
+export default class CarouselIndicator extends Component {
   constructor(props) {
     super(props);
     this.buttonCharacter = this.buttonCharacter.bind(this);
@@ -14,7 +19,7 @@ export default class CarouselIndicator extends Component {
 
   render() {
     return (
-      <div className="carousel--indicators">
+      <div className={"carousel--indicators" + this.props.position}>
       {
         [...Array(this.props.count)].map((_, i) => {
             return (
