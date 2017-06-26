@@ -46,3 +46,12 @@ ul.carousel {
     text-decoration: none; }
   .carousel--indicators .active {
     color: #C30D23; }
+
+.carousel--indicators__centered {
+  justify-content: center; }
+
+.carousel--indicators__left {
+  justify-content: flex-start; }
+
+.carousel--indicators__right {
+  justify-content: flex-end; }
