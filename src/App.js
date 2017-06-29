@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Carousel from './components/Carousel';
+import Carousel, {Position} from './components/Carousel';
 
 class App extends Component {
   render() {
@@ -15,7 +15,7 @@ class App extends Component {
       <div className="App">
         <div className="App-intro">
           <div className="container">
-            <Carousel images={images} />
+            <Carousel images={images} indicatorPosition={Position.RIGHT} />
           </div>
         </div>
       </div>

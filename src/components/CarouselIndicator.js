@@ -1,12 +1,6 @@
 import React, {Component} from 'react';
 import "./Carousel.css";
 
-export const Position = {
-  CENTER: 'carousel--indicators__centered',
-  LEFT: 'carousel--indicators__left',
-  RIGHT: 'carousel--indicators__right'
-}
-
 export default class CarouselIndicator extends Component {
   constructor(props) {
     super(props);

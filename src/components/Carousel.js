@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransitionGroup } from 'react-transition-group';
-import CarouselIndicator, { Position } from "./CarouselIndicator";
+import CarouselIndicator from "./CarouselIndicator";
 import "./Carousel.css";
+
+export const Position = {
+  CENTER: 'carousel--indicators__centered',
+  LEFT: 'carousel--indicators__left',
+  RIGHT: 'carousel--indicators__right'
+}
 
 export default class Carousel extends Component {
   constructor(props) {
@@ -50,12 +56,17 @@ export default class Carousel extends Component {
             />
           </CSSTransitionGroup>
         </ul>
-      <CarouselIndicator position={Position.CENTER} style={this.buttonStyle} currentIndex={this.state.currentIndex} count={this.props.images.length} handleClick={this.handleClick}/>
+      <CarouselIndicator position={this.props.indicatorPosition ? this.props.indicatorPosition : Position.CENTER} 
+                    style={this.buttonStyle}  
+                    currentIndex={this.state.currentIndex} 
+                    count={this.props.images.length} 
+                    handleClick={this.handleClick}/>
       </div>
     );
   }
 } 
 
 Carousel.propTypes = {
-  images: PropTypes.array.isRequired
+  images: PropTypes.array.isRequired,
+  indicatorPosition: PropTypes.string.isRequired
 }
