@@ -15,7 +15,9 @@ class App extends Component {
       <div className="App">
         <div className="App-intro">
           <div className="container">
-            <Carousel images={images} indicatorPosition={Position.RIGHT} />
+            <Carousel images={images} 
+                indicatorPosition={Position.RIGHT} 
+                interval={8000}/>
           </div>
         </div>
       </div>

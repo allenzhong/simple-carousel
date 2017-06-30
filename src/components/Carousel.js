@@ -16,8 +16,14 @@ export default class Carousel extends Component {
     this.state = {
       currentIndex: 0
     }
+
     this.handleClick = this.handleClick.bind(this);
     this.buttonStyle = this.buttonStyle.bind(this);
+    this.getInterval = this.getInterval.bind(this);
+  }
+
+  getInterval() {
+    return this.props.interval ? this.props.interval : 5000;
   }
 
   componentDidMount() {
@@ -25,7 +31,7 @@ export default class Carousel extends Component {
       ()=>{
         console.log(this.state.currentIndex);
         this.setState({currentIndex: (this.state.currentIndex + 1) % this.props.images.length});
-      }, 5000
+      }, this.getInterval()
     );  
   }
 
@@ -68,5 +74,6 @@ export default class Carousel extends Component {
 
 Carousel.propTypes = {
   images: PropTypes.array.isRequired,
-  indicatorPosition: PropTypes.string.isRequired
+  indicatorPosition: PropTypes.string.isRequired, 
+  interval: PropTypes.number.isRequired
 }
