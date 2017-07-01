@@ -2,6 +2,7 @@ $carousel-background: #ccc;
 $button-active-color: #C30D23;
 $button-background: white;
 $button-color: #595757;
+$indicator-height: 30px;
 
 ul.carousel{
   width: 100vw;
@@ -47,7 +48,7 @@ ul.carousel{
 .carousel--indicators {
   display: flex;
   justify-content: flex-end;
-  height: 30px;
+  height: $indicator-height;
   .carousel--indicators_button {
     border: none;
     margin: 0 0 0 0px;

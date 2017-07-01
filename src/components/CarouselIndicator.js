@@ -13,7 +13,7 @@ export default class CarouselIndicator extends Component {
 
   render() {
     return (
-      <div className={"carousel--indicators " + this.props.position}>
+      <div className={`carousel--indicators ${this.props.position}` }>
       {
         [...Array(this.props.count)].map((_, i) => {
             return (
