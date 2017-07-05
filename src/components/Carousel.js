@@ -20,6 +20,8 @@ export default class Carousel extends Component {
     this.handleClick = this.handleClick.bind(this);
     this.buttonStyle = this.buttonStyle.bind(this);
     this.getInterval = this.getInterval.bind(this);
+    this.resetTimer = this.resetTimer.bind(this);
+    this.cleanTimer = this.cleanTimer.bind(this);
   }
 
   getInterval() {
@@ -27,20 +29,30 @@ export default class Carousel extends Component {
   }
 
   componentDidMount() {
-    this.timerID = setInterval(
-      ()=>{
-        console.log(this.state.currentIndex);
-        this.setState({currentIndex: (this.state.currentIndex + 1) % this.props.images.length});
-      }, this.getInterval()
-    );  
+    this.resetTimer();  
   }
 
   componentWillUnmount() {
-    this.timerID && clearInterval(this.timerID);  
+    this.cleanTimer();
+  }
+
+  resetTimer() {
+    this.timerID = setInterval(
+      ()=>{
+        console.log(this.state.currentIndex);
+        this.setState({currentIndex: this.state.currentIndex+1 % this.props.images.length});
+      }, this.getInterval()
+    ); 
+  }
+
+  cleanTimer() {
+    this.timerID && clearInterval(this.timerID);
   }
 
   handleClick(e) {
-    this.setState({currentIndex: e.target.dataset.index});
+    this.setState({currentIndex: Number(e.target.dataset.index)});
+    this.cleanTimer();
+    this.resetTimer();
   }
 
   buttonStyle(i) {
