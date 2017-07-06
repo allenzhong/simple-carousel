@@ -7,7 +7,6 @@ export default class CarouselIndicator extends Component {
   }
 
   render() {
-    console.log(this.props.buttonShape);
     return (
       <div className={`carousel--indicators ${this.props.position}` }>
       {
