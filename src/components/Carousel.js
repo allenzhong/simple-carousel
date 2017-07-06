@@ -10,6 +10,12 @@ export const Position = {
   RIGHT: 'carousel--indicators__right'
 }
 
+export const Shapes = {
+  SMALL_SQUARE: '\u25a0',
+  FISHEYE: '\u25c9',
+  CIRCEL: '\u25cf'
+}
+
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +28,7 @@ export default class Carousel extends Component {
     this.getInterval = this.getInterval.bind(this);
     this.resetTimer = this.resetTimer.bind(this);
     this.cleanTimer = this.cleanTimer.bind(this);
+    this.buttonShape = this.buttonShape.bind(this);
   }
 
   getInterval() {
@@ -59,6 +66,10 @@ export default class Carousel extends Component {
     return Number(this.state.currentIndex) === Number(i) ? "carousel--indicators_button active" : "carousel--indicators_button";
   }
 
+  buttonShape() {
+    return this.props.buttonShape ? this.props.buttonShape : Shapes.SMALL_SQUARE;
+  }
+
   render() {
     return (
       <div>
@@ -78,7 +89,8 @@ export default class Carousel extends Component {
                     style={this.buttonStyle}  
                     currentIndex={this.state.currentIndex} 
                     count={this.props.images.length} 
-                    handleClick={this.handleClick}/>
+                    handleClick={this.handleClick}
+                    buttonShape={this.buttonShape()}/>
       </div>
     );
   }

@@ -4,14 +4,10 @@ import "./Carousel.css";
 export default class CarouselIndicator extends Component {
   constructor(props) {
     super(props);
-    this.buttonCharacter = this.buttonCharacter.bind(this);
-  }
-
-  buttonCharacter() {
-    return this.props.buttonCharacter ? this.props.buttonCharacter : '\u25a0';
   }
 
   render() {
+    console.log(this.props.buttonShape);
     return (
       <div className={`carousel--indicators ${this.props.position}` }>
       {
@@ -21,7 +17,7 @@ export default class CarouselIndicator extends Component {
                       key={i}
                       data-index={i}
                       onClick={this.props.handleClick}>
-                {this.buttonCharacter()}
+                {this.props.buttonShape}
               </button>
             )
           }
