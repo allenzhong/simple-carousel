@@ -99,5 +99,6 @@ export default class Carousel extends Component {
 Carousel.propTypes = {
   images: PropTypes.array.isRequired,
   indicatorPosition: PropTypes.string.isRequired, 
-  interval: PropTypes.number.isRequired
+  interval: PropTypes.number.isRequired,
+  buttonShape: PropTypes.string.isRequired
 }
