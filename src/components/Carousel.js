@@ -80,17 +80,19 @@ export default class Carousel extends Component {
             transitionEnterTimeout={1000}
             transitionLeaveTimeout={1000}>
             <img src={this.props.images[this.state.currentIndex]}
-                 key={this.props.images[this.state.currentIndex]}
-                 alt = ""
+              key={this.props.images[this.state.currentIndex]}
+              alt = ""
             />
           </CSSTransitionGroup>
         </ul>
-      <CarouselIndicator position={this.props.indicatorPosition ? this.props.indicatorPosition : Position.CENTER} 
-                    style={this.buttonStyle}  
-                    currentIndex={this.state.currentIndex} 
-                    count={this.props.images.length} 
-                    handleClick={this.handleClick}
-                    buttonShape={this.buttonShape()}/>
+        <CarouselIndicator 
+          position={this.props.indicatorPosition ? this.props.indicatorPosition : Position.CENTER} 
+          style={this.buttonStyle}  
+          currentIndex={this.state.currentIndex} 
+          count={this.props.images.length} 
+          handleClick={this.handleClick}
+          buttonShape={this.buttonShape()}
+        />
       </div>
     );
   }
