@@ -103,5 +103,6 @@ Carousel.propTypes = {
   images: PropTypes.array.isRequired,
   indicatorPosition: PropTypes.string.isRequired, 
   interval: PropTypes.number.isRequired,
-  buttonShape: PropTypes.string.isRequired
+  buttonShape: PropTypes.string.isRequired,
+  buttonSize: PropTypes.string
 }
