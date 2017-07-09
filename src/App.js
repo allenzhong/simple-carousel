@@ -16,8 +16,10 @@ class App extends Component {
         <div className="App-intro">
           <div className="container">
             <Carousel images={images} 
-                indicatorPosition={Position.RIGHT} 
-                interval={8000}/>
+              indicatorPosition={Position.RIGHT} 
+              interval={8000}
+              buttonSize={'1.1em'}
+            />
           </div>
         </div>
       </div>
