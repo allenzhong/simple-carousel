@@ -7,6 +7,7 @@ export default class CarouselIndicator extends Component {
   }
 
   render() {
+    let style = {fontSize: this.props.buttonSize || '1em' };
     return (
       <div className={`carousel--indicators ${this.props.position}` }>
       {
@@ -16,7 +17,7 @@ export default class CarouselIndicator extends Component {
                       key={i}
                       data-index={i}
                       onClick={this.props.handleClick}>
-                {this.props.buttonShape}
+                <span style={style} >{this.props.buttonShape}</span>
               </button>
             )
           }
