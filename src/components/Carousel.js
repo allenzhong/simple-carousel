@@ -92,6 +92,7 @@ export default class Carousel extends Component {
           count={this.props.images.length} 
           handleClick={this.handleClick}
           buttonShape={this.buttonShape()}
+          buttonSize={this.props.buttonSize}
         />
       </div>
     );
